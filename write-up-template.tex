@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage[tight]{subfigure}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\minimize}{min}
+\DeclareMathOperator*{\maximize}{max}
+
+\usepackage{algorithm}
+ %on linux you may need to run sudo apt-get install texlive-full to install algorithm.sys
+\usepackage{algorithmic}
+
+\usepackage{verbatim}
+
+\newcommand{\handout}[6]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {#1} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{1mm}
+      \hbox to 5.78in { {\Large \hfill #6  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[6]{\handout{#1}{#2}{#3}{#4}{#5}{#6}}
+\newcommand{\collision}[0]{\mathrm{collision}}
+\newcommand{\nocollision}[0]{\overline{\collision}}
+
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{note}[theorem]{Note}
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\title
+{ 
+{\small Multi Robot Planning and Coordination (16-891) Fall 2026 - The Robotics Institute} \\
+Homework 1 : Multi-Agent Path Finding (MAPF) \\
+
+}
+\author{Your Name Here}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Collaborators: }
+%Everyone you collaborated with and a short description of what you discussed
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\section{Implementing Prioritized Planning}
+
+\textbf{(3 points) Q - Document the changes you made in your code to handle goal related edge-cases and the failure condition. Also, state and justify the upper bound you used in your code (i.e., why they can address the issues and why they preserve the optimality and completeness of the A* search).}
+
+A - % Answer here
+
+\newpage
+
+\section{Challenge Your MAPF Solvers}
+
+\textbf{(2 points) Maze Map}
+
+\begin{table}[htbp]
+  \centering
+  \label{tab:planner_results}
+  \begin{tabular}{r ccc ccc ccc}
+    \toprule
+    \multirow{2}{*}{\textbf{Agents}} 
+      & \multicolumn{2}{c}{\textbf{Prioritized}} 
+      & & \multicolumn{2}{c}{\textbf{CBS}} 
+      & & \multicolumn{2}{c}{\textbf{PBS}} \\
+    \cmidrule{2-3} \cmidrule{5-6} \cmidrule{8-9}
+      & \textbf{SOC} & \textbf{A* Node Exp.} 
+      & & \textbf{SOC} & \textbf{A* Node Exp.} 
+      & & \textbf{SOC} & \textbf{A* Node Exp.} \\
+    \midrule
+    2   & -- & -- & & -- & -- & & -- & -- \\
+    4   & -- & -- & & -- & -- & & -- & -- \\
+    6   & -- & -- & & -- & -- & & -- & -- \\
+    8   & -- & -- & & -- & -- & & -- & -- \\
+    10  & -- & -- & & -- & -- & & -- & -- \\
+    12 & -- & -- & & -- & -- & & -- & -- \\
+    14 & -- & -- & & -- & -- & & -- & -- \\
+    16 & -- & -- & & -- & -- & & -- & -- \\
+    18 & -- & -- & & -- & -- & & -- & -- \\
+    20 & -- & -- & & -- & -- & & -- & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\textbf{(2 points) Random Map}
+
+[Copy the table and repeat for \texttt{random\_map.txt}]
+
+\textbf{(1 point) Q - Analyze the performance of the 3 algorithms on these maps. Explain the differences in instances solved, A* nodes expanded, and sum of costs.}
+
+A - % Answer here
+
+\end{document} % Done!
